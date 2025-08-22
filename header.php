@@ -1,8 +1,9 @@
 <?php require_once("dados.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<?php $json = (isset($url_json)) ? get_materias($url_json) : NULL; ?>
+    <?php $json = (isset($url_json)) ? get_materias($url_json) : NULL; ?>
     <?php $json_ler = (isset($url_json_ler)) ? get_materias($url_json_ler) : NULL; ?>
 
     <meta charset="UTF-8">
@@ -20,11 +21,11 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">     -->
     <?= "<style>" ?>
-        <?= file_get_contents('assets/css/support.min.css'); ?>
-        <?= file_get_contents('assets/css/bootstrap-grid.min.css'); ?>
-        <?= file_get_contents('assets/css/style.min.css'); ?>
-        <?= file_get_contents('assets/css/owl.carousel.min.css'); ?>
-        <?= file_get_contents('assets/css/owl.theme.default.min.css'); ?>
+    <?= file_get_contents('assets/css/support.min.css'); ?>
+    <?= file_get_contents('assets/css/bootstrap-grid.min.css'); ?>
+    <?= file_get_contents('assets/css/style.min.css'); ?>
+    <?= file_get_contents('assets/css/owl.carousel.min.css'); ?>
+    <?= file_get_contents('assets/css/owl.theme.default.min.css'); ?>
     <?= "</style>" ?>
 
     <!-- Arquivos JS -->
@@ -54,95 +55,106 @@
 
 <body>
 
-<!-- whatsapp -->
-<!-- <a class="d-flex align-items-center justify-content-center" href="<?= $whatsapp_link ?>" style="position:fixed; width:50px;height:50px;bottom:10px;right:10px;background-color:#25d366;color:#FFF;border-radius:50px; font-size:25px;z-index:1000;" target="_blank">
+    <!-- whatsapp -->
+    <!-- <a class="d-flex align-items-center justify-content-center" href="<?= $whatsapp_link ?>" style="position:fixed; width:50px;height:50px;bottom:10px;right:10px;background-color:#25d366;color:#FFF;border-radius:50px; font-size:25px;z-index:1000;" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a> -->
 
-<header>
-    <div class="topo line sdw">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-auto d-flex justify-content-center justify-content-md-start">
-                    <div class="logo py-1">
-                        <a href="index.php" target="_self"> <img src="assets/imgs/logo.png" alt=""> </a>
+    <header>
+        <div class="topo line sdw">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-auto d-flex justify-content-center justify-content-md-start">
+                        <div class="logo py-1">
+                            <a href="index.php" target="_self"> <img src="assets/imgs/logo.png" alt=""> </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md">
-                    <nav class="text-align-center">
-                        <a class="d-md-none botao-responsivo"> <i class="fa fa-lg fa-fw fa-bars pull-right"></i> Menu principal </a>
-                        <ul class="d-none d-md-flex flex-wrap align-items-center justify-content-center justify-content-md-end main-menu">
-                            <!-- <li class="abre">
+                    <div class="col-md">
+                        <nav class="text-align-center">
+                            <a class="d-md-none botao-responsivo"> <i class="fa fa-lg fa-fw fa-bars pull-right"></i> Menu principal </a>
+                            <ul class="d-none d-md-flex flex-wrap align-items-center justify-content-center justify-content-md-end main-menu">
+                                <!-- <li class="abre">
                                 <a style="cursor: default;"> serviços titulo <i class="fas fa-angle-down"></i> </a>
                                 <ul class="sm">           
                                     <li><a href="#"> titulo </a> </li>
                                     <li><a href="#"> titulo </a> </li>
                                 </ul>
                             </li> -->
-                            <li><a href="index.php"> Home </a></li>
-                            <li><a href="empresa.php"> Empresa </a></li>
-                            <li><a href="servicos.php"> Serviços </a></li>
-                            <li><a href="javascript:movimenta('#duvidas');"> Dúvidas </a></li>
-                            <li><a href="lgpd.php"> LGPD </a> </li>
-                            <li><a href="fale-conosco.php"> Entre em Contato </a> </li>
-                            <a class="sear fa fa-search" href="javascript:janela_modal('#modal_search')"> </a>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="zero"></div> -->
-
-    <div class="banner">      
-        <div class="banner-foto" style="background:url(assets/imgs/b1.jpg) right; background-size :cover;" data-cycle-fx=tileSlide data-cycle-tile-count=8> </div>
-        <!-- <div class="banner-foto" style="background:url(assets/imgs/b2.jpg) right; background-size :cover;" data-cycle-fx=tileSlide data-cycle-tile-count=8> </div> -->
-    </div>
-        
-    <div class="altura last d-flex flex-column align-items-center justify-content-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">     
-                    <div class="owl-slogan owl-carousel owl-theme cor">
-                        <div>
-                            <h1 class="mb-1">Seja <span class="cor-c1"> bem-vindo </span> ao nosso portal </h1>
-                            <h3 class="mb-1">Anos exercendo <span class="cor-c1">serviços de contabilidade diferenciados</span> para seu clientes.  </h3>
-                            <p> Aqui você pode conhecer nossa filosofia de trabalho, nossos serviços e clientes, além de poder nos contatar para tirar dúvidas, dar sugestões entre outros. </p>
-                        </div>
-                    </div>
-                    <a href="fale-conosco.php" target="_self" class="bt bt-bw mt-1"> Fale <strong> conosco </strong>  </a>
-                </div>
-                <div class="col-md-4 position-relative">
-                    <div class="circle circle-c1">
-                        <div class="position-relative">
-                            <i class="far fa-lightbulb fa-4x"></i>
-                            <p> A contabilidade da sua empresa de um jeito simples e prático! </p>
-                        </div>
+                                <li><a href="index.php"> Home </a></li>
+                                <li><a href="empresa.php"> Empresa </a></li>
+                                <li><a href="servicos.php"> Serviços </a></li>
+                                <li><a href="javascript:movimenta('#duvidas');"> Dúvidas </a></li>
+                                <li><a href="lgpd.php"> LGPD </a> </li>
+                                <li><a href="fale-conosco.php"> Entre em Contato </a> </li>
+                                <a class="sear fa fa-search" href="javascript:janela_modal('#modal_search')"> </a>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- <div class="zero"></div> -->
 
-<div id="modal">
-    <div class="janela_modal" id="modal_search">
-    <h2 class="display-3 font-weight-600 my-1 cor-c2"> <span class="font-weight-300 cor"> Busca </span> Google </h2>
-        <form class="search" name="busca" action="https://www.google.com.br/search" method="get" target="_blank">
-            <div class="d-flex flex-wrap">
-                <input type="search" name="q" placeholder="Faça sua pesquisa" required="" size="40">
-                    <button> Buscar </button>
+        <div class="banner">
+            <div class="banner-foto" style="background:url(assets/imgs/b1.jpg) right; background-size :cover;" data-cycle-fx=tileSlide data-cycle-tile-count=8> </div>
+            <!-- <div class="banner-foto" style="background:url(assets/imgs/b2.jpg) right; background-size :cover;" data-cycle-fx=tileSlide data-cycle-tile-count=8> </div> -->
+        </div>
+
+        <div class="altura last d-flex flex-column align-items-center justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="owl-slogan owl-carousel owl-theme cor">
+                            <div>
+                                <h1 class="mb-1">Seja <span class="cor-c1"> bem-vindo </span> ao nosso portal </h1>
+                                <h3 class="mb-1">Há Anos exercendo <span class="cor-c1">serviços de contabilidade diferenciados</span> para seu clientes. </h3>
+                                <p> Aqui você pode conhecer nossa filosofia de trabalho, nossos serviços e clientes, além de poder nos contatar para tirar dúvidas, dar sugestões entre outros. </p>
+                            </div>
+                        </div>
+                        <a href="fale-conosco.php" target="_self" class="bt bt-bw mt-1"> Fale <strong> conosco </strong> </a>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <div class="circle circle-c1">
+                            <div class="position-relative">
+                                <i class="far fa-lightbulb fa-4x"></i>
+                                <p> A contabilidade da sua empresa de um jeito simples e prático! </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </form>
-    </div>
-</div>
+        </div>
 
-</header>
+        <div id="modal">
+            <div class="janela_modal" id="modal_search">
+                <h2 class="display-3 font-weight-600 my-1 cor-c2"> <span class="font-weight-300 cor"> Busca </span> Google </h2>
+                <form class="search" name="busca" action="https://www.google.com.br/search" method="get" target="_blank">
+                    <div class="d-flex flex-wrap">
+                        <input type="search" name="q" placeholder="Faça sua pesquisa" required="" size="40">
+                        <button> Buscar </button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-<?php if (!isset($index)) : ?>
-    <style>
-        .altura{ min-height: auto !important; }
-        .last{ display: none !important; }
-        .banner-foto{background: linear-gradient(135deg, white 0%, #f2f2f2 45%, #ededed 45%, white 100%) !important; }
-        .banner:before{ display: none !important; }
-    </style>
-<?php endif; ?>
+    </header>
+
+    <?php if (!isset($index)) : ?>
+        <style>
+            .altura {
+                min-height: auto !important;
+            }
+
+            .last {
+                display: none !important;
+            }
+
+            .banner-foto {
+                background: linear-gradient(135deg, white 0%, #f2f2f2 45%, #ededed 45%, white 100%) !important;
+            }
+
+            .banner:before {
+                display: none !important;
+            }
+        </style>
+    <?php endif; ?>
